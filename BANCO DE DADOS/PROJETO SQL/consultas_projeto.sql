@@ -52,9 +52,10 @@ FROM criar_relatorio cr
 INNER JOIN relatorios r ON r.id_relatorio = cr.relatorios_id_relatorio
 
 
-Seleciona os paineis requeridos
+Seleciona os paineis requeridos que possuem descricao
 SELECT *  
 FROM requerimento_paineis rp
+WHERE rp.desceicaoo IS NOT NULL
 
 Quantidade de usuarios agrupados por funcao e cargo
 SELECT u.cargo, u.funcao, COUNT(*) as qt_usuarios
